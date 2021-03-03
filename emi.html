@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function emiCalculation(){
+	var loanAmount=document.emi.loanamt.value;
+	var interestRate=document.emi.intrate.value;
+	var loanPeriod=document.emi.loanprd.value;
+
+	
+	if(loanAmount=="" || loanAmount==null){
+		alert("Loan Amount cannot be left blank")
+	}else if(interestRate=="" || interestRate==null){
+		alert("Interest Rate cannot be left blank")
+	}else if(loanPeriod=="" || loanPeriod==null){
+		alert("Loan Period cannot be left blank")
+	}
+}
+</script>
+</head>
+<body>
+    <center>
+        <h2>EMI CALCULATOR</h2>
+        <form action="" name="emi" onsubmit="return emiCalculation()">
+        <table>
+            <tr>
+                <td>Enter Loan Amount (Rs.)</td>
+                <td><input type="number" name="loanamt"></td>
+            </tr>
+            <tr>
+                <td>Enter Interest Rate (%)</td>
+                <td><input type="number" name="intrate"></td>
+            </tr>
+            <tr>
+                <td>Enter Loan Period (Yrs)</td>
+                <td><input type="number" name="loanprd"></td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" name="submit" value="calculate"></td>
+                <td><input type="reset" name="reset" value="reset"></td>
+            </tr>
+        </table>
+        </form>
+    </center>
+</body>
+</html>
