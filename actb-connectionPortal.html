@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function connectionPortal(){
+	var customerName=document.actb.cname.value;
+	var customerEmail=document.actb.cmail.value;
+	var customerNumber=document.actb.cnumber.value;
+	var broadband=document.actb.cbb.value;
+	var schemeType=document.actb.cscheme.value;
+	var connectionDuration=document.actb.cduration.value;
+	
+	if(customerName=="" || customerName==null){
+		alert("Customer Name cannot be left blank")
+	}else if(customerEmail=="" || customerEmail==null){
+		alert("Customer Email cannot be left blank")
+	}else if(customerNumber=="" || customerNumber==null){
+		alert("Customer Number cannot be left blank")
+	}else if(broadband=="" || broadband==null){
+		alert("Broadband Type cannot be left blank")
+	}else if(schemeType=="" || schemeType==null){
+		alert("Scheme Type cannot be left blank")
+	}else if(connectionDuration=="" || connectionDuration==null){
+		alert("Connection Duration cannot be left blank")
+	}
+}
+</script>
+</head>
+<body>
+    <center>
+        <h2>ACTB CONNECTION PORTAL</h2>
+        <form action="" name="actb" onsubmit="return connectionPortal()">
+        <table>
+            <tr>
+                <td>Customer Name</td>
+                <td><input type="text" name="cname"></td>
+            </tr>
+            <tr>
+                <td>Customer Email</td>
+                <td><input type="text" name="cmail"></td>
+            </tr>
+            <tr>
+                <td>Mobile Number</td>
+                <td><input type="number" name="cnumber"></td>
+            </tr>
+            <tr>
+                <td>Type of Broadband</td>
+                <td><input type="text" name="cbb"></td>
+            </tr>
+            <tr>
+                <td>Scheme Name</td>
+                <td><input type="text" name="cscheme"></td>
+            </tr>
+            <tr>
+                <td>Connection Duration</td>
+                <td><input type="number" name="cduration"></td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" name="submit" value="calculate"></td>
+                <td><input type="reset" name="reset" value="reset"></td>
+            </tr>
+        </table>
+        </form>
+    </center>
+</body>
+</html>
